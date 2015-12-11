@@ -1,0 +1,344 @@
+@import "mixins.less";
+
+@media only screen and (min-width: 768px) {
+	#slider {
+		.swiper-container {
+			height: 900px;
+		}
+	}
+	.social-icons-divider {
+		display: none;
+	}
+	.mobile-menu {
+		display: none !important;
+	}
+	#content {
+		#counters {
+			.background-size( cover ) !important;
+		}
+	}
+}
+@media only screen and (max-width: 768px) {
+	#sticky-header {
+		display: none !important;
+	}
+	.sliding-menu-bg, 
+	.sliding-menu {
+		display: none;
+	}
+	#slider {
+		.swiper-container {
+			height: 600px;
+		}
+		.slider-halfbg {
+			display: none;
+		}
+		.slider-control {
+			height: 200px;
+		}
+		.slider-control-text-column {
+			background-color: @bg-color2;
+		}
+	}
+	#content {
+		.slider-wrapper .slide .slide-num {
+			font-size: 100px;
+		}
+		.counter-subtitle {
+			margin-bottom: 50px;
+		}
+		#row-about-us img.fullwidth {
+			position: relative !important;
+			margin-bottom: 30px;
+		}
+		#counters .col-xs-6:nth-child(3) {
+			clear: left;
+		}
+		.timeline-posts-container {
+			padding-top: 0;
+			.start-date,
+			.start-date-rectangle,
+			.start-date-circle,
+			.timeline {
+				display: none;
+			}
+			.posts .post {
+				float: none !important;
+				width: 100%;
+				padding: 0 !important;
+				margin-bottom: 50px;
+				&:nth-child(2) {
+					margin-top: 0 !important;
+				}
+				&:before {
+					content: none;
+					display: none;
+				}
+				.icon-container {
+					display: none;
+				}
+				.post-area {
+					width: 100%;
+				}
+			}
+		}
+		.logo:nth-child(1),
+		.logo:nth-child(2) {
+			margin-bottom: 20px !important;
+		}
+	}
+	.blog-posts .post {
+		.author-info {
+			.author-name,
+			.author-meta {
+				float: none;
+				margin: auto;
+				width: auto;
+			}
+			.author-name {
+				margin-bottom: 30px;
+				max-width: 280px;
+			}
+			.author-meta {
+				text-align: center;
+			}
+		}
+	}
+	.project-body {
+		margin-bottom: 50px;
+		&:after {
+			content: none !important;
+		}
+	}
+	.team {
+		.language-skills {
+			margin-top: 50px;
+		}
+	}
+}
+@media only screen and (max-width: 800px) {
+	#content {
+		#contact-us {
+			.contact-form-triangle,
+			.contact-form-rectangle,
+			.contact-form-circle {
+				width: 95%;
+				padding: 60px 30px;
+				height: auto;
+				background-color: @dark-color;
+				border-radius: 0;
+				&:after {
+					content: none;
+				}
+				#name,
+				#email,
+				#subject,
+				#message {
+					width: 100%;
+				}
+				#submit,
+				input[type=submit] {
+					max-width: 200px;
+					width: 80%;
+					height: auto;
+					padding: 15px;
+					margin: 60px auto 0;
+					position: static;
+					background-color: @primary-color;
+					.transition( background-color 0.3s );
+					border-radius: 0;
+					&:hover {
+						background-color: @primary-hover-color;
+					}
+					&:after {
+						content: none;
+					}
+				}
+			}
+		}
+	}
+}
+@media only screen and (max-width: 992px) {
+	#slider {
+		.slide-num-info {
+			padding-left: 0 !important;
+		}
+	}
+	#content {
+		.person {
+			margin-bottom: 40px !important;
+		}
+		#features {
+			.laptop-mockup-wrapper {
+				padding-top: 50px;
+				#laptop-mockup {
+					position: static !important;
+					float: right;
+					width: 90% !important;
+				}
+			}
+		}
+		#screen-size-nomatters .ipad {
+			display: none !important;
+		}
+		.pricing-column {
+			margin-bottom: 50px !important;
+		}
+		.testimonial {
+			margin-bottom: 30px !important;
+		}
+		#what-people-say .bg-stripe {
+			top: 600px;
+		}
+	}
+	.team {
+		.member-image {
+			margin-bottom: 40px;
+		}
+	}
+}
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+	#content .slider-wrapper .slide .slide-num {
+		font-size: 140px;
+	}
+}
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+	#content .slider-wrapper .slide .slide-num {
+		font-size: 200px;
+	}
+}
+
+@media only screen and (max-width: 560px) {
+	.hidden-xxs {
+		display: none !important;
+	}
+	.col-xxs-full {
+		float: none !important;
+		width: 100% !important;
+	}
+	.padding-clear-xxs {
+		padding-left: 0 !important;
+		padding-right: 0 !important;
+	}
+	#slider {
+		.swiper-slide .slider-title {
+			font-size: 32px;
+		}
+		.slider-control .slider-control-text-container {
+			padding-left: 0;
+		}
+	}
+	#content {
+		.bg-stripe {
+			height: 1080px;
+		}
+		.bg-rect {
+			margin-top: 70%;
+		}
+		.bg-ellipse {
+			margin-top: 50%;
+		}
+		#col-responsive-design-02 {
+			padding-top: 50px !important;
+		}
+		.slider-wrapper .slide {
+			.row {
+				padding: 0 15px !important;
+			}
+			.slide-num {
+				padding-left: 15px;
+				margin-bottom: 30px;
+				.triangle-right-line {
+					display: none;
+				}
+			}
+		}
+		#features .feature {
+			.content {
+				width: 60%;
+			}
+			&:hover .feature-wrapper {
+				.transform( translateX( 10px ) );
+			}
+		}
+	}
+	footer {
+		.col-logo {
+			margin-bottom: 30px;
+		}
+	}
+	.blog-posts .post {
+		.meta {
+			text-align: center;
+		}
+		.readmore {
+			float: none;
+			display: inline-block;
+			margin-bottom: 10px;
+		}
+		.meta-infos {
+			float: none;
+			margin: 0 auto 10px !important;
+			.meta-info:not(:last-child) {
+				margin-right: 25px;
+			}
+		}
+		.comment-list ul.children {
+			padding-left: 45px;
+		}
+	}
+}
+
+@media only screen and (max-width: 480px) {
+	.col-xxxs-full {
+		float: none !important;
+		width: 100% !important;
+	}
+	.team-nav {
+		height: 260px !important;
+		&:before {
+			content: none !important;
+		}
+		.team-nav-link-wrapper {
+			float: none !important;
+			width: 100% !important;
+			height: 50% !important;
+		}
+	}
+	#related-projects-slider .swiper-pagination-bullet {
+		margin-left: 5px;
+		margin-right: 5px;
+	}
+	.blog-posts {
+		.comment-list ul.children {
+			padding-left: 0 !important;
+		}
+	}
+}
+
+/* Media query for work hover title font size */
+@media only screen and (max-width: 490px) {
+	.work .work-hover .work-hover-content .title {
+		font-size: 24px !important;
+		font-size: 6vw !important;
+	}
+}
+@media only screen and (min-width: 490px) and (max-width: 768px) {
+	.work .work-hover .work-hover-content .title {
+		font-size: 18px !important;
+		font-size: 3vw !important;
+	}
+}
+@media only screen and (min-width: 769px) and (max-width: 1200px) {
+	.work .work-hover .work-hover-content .title {
+		font-size: 20px !important;
+		font-size: 2vw !important;
+	}
+}
+
+/* Media query for navigation menu */
+@media only screen and (max-height: 850px) {
+	.sliding-menu {
+		padding-bottom: 160px;
+	}
+}

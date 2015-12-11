@@ -1,0 +1,129 @@
+@import "mixins.less";
+
+#slider {
+	position: relative;
+	background-color: @dark-color;
+	.swiper-container {
+		width: 100%;
+	}
+	.swiper-slide {
+		background-size: cover;
+		background-position: center center;
+		.container {
+			height: 100%;
+		}
+		.slider-content {
+			text-align: center;
+			position: relative;
+			.slider-shape-rect {
+				width: 230px;
+				height: 230px;
+				border: 6px solid @primary-color;
+				margin: auto;
+			}
+			.slider-shape-circle {
+				width: 270px;
+				height: 270px;
+				border: 6px solid @primary-color;
+				border-radius: 999px;
+				margin: auto;
+			}
+		}
+		.slider-text {
+			position: absolute;
+			top: 0;
+			width: 100%;
+		}
+		.slider-title {
+			width: 100%;
+			max-width: 650px;
+			margin: auto;
+			color: #fff;
+			font-family: 'Exo 2';
+			font-weight: 800;
+			font-size: 42px;
+			line-height: 1.2;
+			text-align: center;
+		}
+	}
+	.slider-control {
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		width: 100%;
+		height: 100px;
+		z-index: @zindex-base + 10;
+		.slider-halfbg {
+			position: absolute;
+			left: 50%;
+			top: 0;
+			width: 50%;
+			bottom: 0;
+			background-color: @bg-color2;
+		}
+		.slider-controls {
+			height: 100px;
+			padding-top: 24px;
+			.slider-control-prev,
+			.slider-control-next {
+				color: @primary-color;
+				font-size: 26px;
+				font-weight: bold;
+				cursor: pointer;
+			}
+			#slide-control-line {
+				margin-top: 12px;
+				width: 100%;
+				height: 5px;
+				background-color: @primary-color;
+			}
+			.slide-num-info {
+				white-space: nowrap;
+			}
+			#current-slider-num,
+			#sn-divider,
+			#sliders-count {
+				font-family: 'Roboto', sans-serif;
+				font-weight: 700;
+			}
+			#current-slider-num {
+				color: #fff;
+				font-size: 27px;
+				line-height: 1;
+			}
+			#sn-divider,
+			#sliders-count {
+				color: @primary-color;
+				font-size: 20px;
+				line-height: 1;
+			}
+		}
+		.slider-control-text-container {
+			background-color: @bg-color2;
+			height: 100px;
+			.valign-middle-container;
+			padding-left: 40px;
+			.slider-control-text {
+				.valign-middle;
+				text-align: left;
+				i {
+					color: @dark-color;
+					font-size: 24px;
+					vertical-align: middle;
+					margin-right: 15px;
+				}
+				#slider-control-title,
+				#st-divider {
+					font-family: 'Exo 2', sans-serif;
+					font-size: 18px;
+					font-weight: 800;
+					color: @dark-color;
+				}
+				#st-divider {
+					margin: 0 25px 0 30px;
+				}
+			}
+		}
+	}
+}
+

@@ -1,0 +1,236 @@
+@import "mixins.less";
+
+.sidebar {
+	ul {
+		padding: 0;
+		margin: 0;
+		li {
+			list-style: none;
+			display: block;
+		}
+	}
+	.widget {
+		margin-bottom: 40px;
+		.title {
+			font-weight: bold;
+			font-size: 18px;
+			color: @dark-color;
+			padding-bottom: 20px;
+			margin-bottom: 20px;
+			position: relative;
+			&:after {
+				position: absolute;
+				display: block;
+				content: '';
+				width: 70px;
+				height: 5px;
+				left: 0;
+				bottom: 0;
+				background-color: @bg-color2;
+			}
+		}
+	}
+	.widget-search {
+		padding-bottom: 15px;
+		border-bottom: 1px solid @primary-color;
+		#s {
+			border: 0;
+			background-color: @bg-color1;
+			display: block;
+			width: 88%;
+			float: left;
+			font-family: 'Exo 2', sans-serif;
+			font-size: 18px;
+			font-weight: 300;
+			color: @primary-color;
+			line-height: 1;
+			outline: 0;
+			.placeholder-color( @primary-color );
+		}
+		#submit {
+			color: @primary-color;
+			font-weight: bold;
+			display: block;
+			float: right;
+			padding-top: 3px;
+			cursor: pointer;
+		}
+	}
+	.widget-categories {
+		ul {
+			position: relative;
+			display: block;
+			&:before {
+				position: absolute;
+				display: block;
+				content: '';
+				left: 4px;
+				top: 21px;
+				bottom: 22px;
+				width: 1px;
+				background-color: #999;
+				z-index: @zindex-base + 5;
+			}
+		}
+		li {
+			height: 36px;
+			line-height: 36px;
+			font-weight: 400;
+			padding-left: 30px;
+			position: relative;
+			a {
+				color: @text-color;
+				display: block;
+			}
+			&:before {
+				position: absolute;
+				display: block;
+				content: '';
+				width: 9px;
+				height: 9px;
+				left: 0;
+				top: 13px;
+				border-radius: 999px;
+				border: 1px solid #999;
+				background-color: @bg-color1;
+				z-index: @zindex-base + 6;
+			}
+			&:hover {
+				a {
+					color: @primary-color;
+				}
+				&:before {
+					border: @primary-color;
+					background-color: @primary-color;
+				}
+			}
+		}
+	}
+	.widget-recent-posts {
+		li {
+			.after-clearfix;
+			&:not(:last-child) {
+				margin-bottom: 30px;
+			}
+			img {
+				float: left;
+				display: block;
+				width: 98px;
+				height: 98px;
+				border: 1px solid @border-color;
+			}
+			.post-title {
+				display: block;
+			}
+			.category, .post-title, .divider, .readmore-link {
+				margin-left: 128px;
+			}
+			.category {
+				font-weight: bold;
+				color: @primary-color;
+				text-transform: uppercase;
+				font-family: 'Exo 2', sans-serif;
+				font-weight: bold;
+				font-size: 14px;
+				position: relative;
+				top: -3px;
+				margin-bottom: 5px;
+				i {
+					vertical-align: -15%;
+					margin-right: 7px;
+				}
+			}
+			.post-title {
+				font-family: 'Exo 2', sans-serif;
+				font-size: 18px;
+				font-weight: bold;
+				color: @dark-color;
+				white-space: nowrap;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				text-transform: uppercase;
+				&:hover {
+					color: @primary-color;
+				}
+			}
+			.divider {
+				width: 70px;
+				margin-top: 10px;
+				margin-bottom: 10px;
+			}
+			.readmore {
+				margin-top: 0;
+				&:not(:hover) {
+					color: @dark-color;
+					&:before {
+						background-color: @dark-color;
+					}
+					&:after {
+						border-color: rgba(255,255,255,0) @dark-color;
+					}
+				}
+			}
+		}
+	}
+	.widget-text {
+		a {
+			font-weight: bold;
+		}
+	}
+	.widget-twitter {
+		li {
+			&:not(:last-child) {
+				margin-bottom: 35px;
+			}
+		}
+		.author {
+			color: @primary-color;
+			font-weight: 400;
+			i {
+				vertical-align: -15%;
+				margin-right: 6px;
+			}
+		}
+		.link {
+			display: block;
+		}
+		.tweet {
+			margin: 2px 0 7px;
+		}
+		.link, .time {
+			font-size: 12px;
+			line-height: 1.6;
+			font-weight: 400;
+		}
+	}
+	.widget-flickr {
+		.row > div {
+			margin-bottom: 30px;
+		}
+		.flickr-image {
+			display: block;
+			width: 100%;
+			border: 1px solid @border-color;
+		}
+	}
+	.widget-tags {
+		.tags {
+			.after-clearfix;
+			a {
+				display: block;
+				float: left;
+				margin: 0 10px 10px 0;
+				border: 1px solid @border-color;
+				background-color: @bg-color2;
+				color: @dark-color;
+				.transition( border-color 0.3s, background-color 0.3s, color 0.3s; );
+				padding: 10px 18px;
+				&:hover {
+					color: #fff;
+					border-color: @primary-color;
+					background-color: @primary-color;
+				}
+			}
+		}
+	}
+}

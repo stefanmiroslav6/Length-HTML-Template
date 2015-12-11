@@ -1,0 +1,220 @@
+@import "mixins.less";
+
+#sticky-header {
+	display: none;
+	z-index: @zindex-base + 40;
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	background-color: rgba(22,22,22,.8) !important;
+	.logo {
+		font-size: 24px !important;
+	}
+	.header-content-left,
+	.header-content-right {
+		height: @sticky-header-height !important;
+	}
+}
+header, #sticky-header {
+	background-color: #161616;
+	.header-content-left,
+	.header-content-right {
+		.valign-middle-container;
+		height: @header-height;
+		width: 45%;
+	}
+	.header-content-left {
+		float: left;
+		.logo {
+			.valign-middle;
+			font-family: 'Exo 2';
+			font-weight: 800;
+			font-size: 32px;
+			color: @primary-color;
+		}
+	}
+	.header-content-right {
+		float: right;
+		text-align: right;
+		#menu-toggle,
+		#sticky-menu-toggle {
+			.valign-middle;
+			width: auto !important;
+			font-family: 'Exo 2';
+			font-weight: 300;
+			font-size: 16px;
+			color: #fff;
+			cursor: pointer;
+			i {
+				position: relative;
+				top: -1px;
+				font-size: 24px;
+				vertical-align: -25%;
+				margin-right: 5px;
+				color: @primary-color;
+			}
+		}
+	}
+	.mobile-menu {
+		background-color: @dark-color;
+		display: none;
+		padding: 0 40px;
+		.menu-item {
+			color: #eee;
+			font-weight: bold;
+			text-transform: uppercase;
+			display: block;
+			height: 60px;
+			line-height: 60px;
+			&:not(:last-child) {
+				border-bottom: 1px solid #474747;
+			}
+			&:hover {
+				color: #fff;
+			}
+		}
+	}
+}
+
+.sliding-menu-bg {
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;//970px;
+	background-color: #000;
+	z-index: @zindex-base + 50;
+	opacity: 0;
+	.transition( visibility 0.5s, opacity 0.25s; );
+	visibility: hidden;
+	&.opened {
+		opacity: 0.8;
+		visibility: visible;
+	}
+}
+
+.sliding-menu {
+	position: fixed;
+	right: 0;
+	top: 0;
+	width: 38.8%;
+	min-width: 560px;
+	min-height: 700px;
+	height: 100%;
+	background: url('../images/sliding-menu-bg.jpg') center center no-repeat;
+	z-index: @zindex-base + 51;
+	.transform( translateX( 100% ) );
+	.transition-transform( 0.5s );
+	.valign-middle-container;
+	&.opened {
+		.transform( translateX( 0% ) );
+	}
+	&:after {
+		position: absolute;
+		display: block;
+		content: '';
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(255,255,255,.91);
+		z-index: @zindex-base + 52;
+	}
+	.menu-items {
+		position: relative;
+		z-index: @zindex-base + 53;
+		overflow: hidden;
+		.valign-middle;
+		.menu-item {
+			margin-left: 34.765%;
+			float: left;
+			display: block;
+			clear: both;
+			padding: 0 22px;
+			font-family: 'Exo 2', sans-serf;
+			font-size: 22px;
+			line-height: 45px;
+			font-weight: 600;
+			color: @dark-color;
+			text-transform: uppercase;
+			cursor: pointer;
+			position: relative;
+			&:hover {
+				color: @primary-color;
+				&:before {
+					position: absolute;
+					display: block;
+					content: '';
+					right: 100%;
+					margin-right: 10px;
+					top: 16px;
+					width: 1000px;
+					height: 16px;
+					background-color: #0d0d0d;
+				}
+				&:after {
+					position: absolute;
+					display: block;
+					content: '';
+					left: 0;
+					top: 16px;
+					width: 3px;
+					height: 16px;
+					background-color: @primary-color;
+				}
+			}
+		}
+	}
+	.menu-close {
+		display: block;
+		position: absolute;
+		right: 40px;
+		top: 40px;
+		z-index: @zindex-base + 53;
+		i {
+			width: 15px;
+			height: 15px;
+			text-align: center;
+			line-height: 1;
+			font-weight: bold;
+			color: @dark-color;
+		}
+		&:hover i {
+			color: @primary-color;
+		}
+	}
+	.brand-text {
+		position: absolute;
+		left: 75px;
+		bottom: 40px;
+		width: 300px;
+		color: @dark-color;
+		z-index: @zindex-base + 53;
+		.logo {
+			font-family: 'Exo 2', sans-serif;
+			font-weight: 800;
+			font-size: 32px;
+			color: @primary-color;
+			text-transform: uppercase;
+		}
+	}
+	.social-icons {
+		position: absolute;
+		right: 70px;
+		bottom: 45px;
+		width: auto;
+		z-index: @zindex-base + 53;
+		.social-icon {
+			float: left;
+			font-size: 20px;
+			color: @dark-color;
+			&:not(:first-child) {
+				margin-left: 15px;
+			}
+			&:hover {
+				color: @primary-color;
+			}
+		}
+	}
+}

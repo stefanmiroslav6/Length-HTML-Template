@@ -1,0 +1,116 @@
+@header-height: 70px;
+@sticky-header-height: 50px;
+@primary-color: #ee3054;
+@primary-hover-color: #db2144;
+@secondary-color: #2bbdaa;
+@bg-color1: #fff;
+@bg-color2: #f7f7f7;
+@dark-color: #161616;
+@text-color: #636363;
+@border-color: #ddd;
+@zindex-base: 100;
+
+.valign-middle-container() {
+	&:before {
+		display: inline-block;
+		content: '';
+		height: 100%;
+		vertical-align: middle;
+	}
+}
+
+.valign-middle() {
+	display: inline-block;
+	width: 96%;
+	vertical-align: middle;
+}
+
+.after-clearfix() {
+	&:after {
+		display: block;
+		clear: both;
+		content: '';
+	}
+}
+
+.background-size( @value ) {
+	-webkit-background-size: @value;
+	-moz-background-size: @value;
+	-o-background-size: @value;
+	background-size: @value;
+}
+
+.transition( @value ) {
+	-webkit-transition: @value;
+	-moz-transition: @value;
+	-o-transition: @value;
+	transition: @value;
+}
+
+.transition-transform( @param ) {
+	-webkit-transition: -webkit-transform @param;
+	   -moz-transition: -moz-transform @param;
+	     -o-transition: -o-transform @param;
+	        transition: transform @param;
+}
+
+.box-shadow( @value ) {
+	-webkit-box-shadow: @value;
+	-moz-box-shadow: @value;
+	box-shadow: @value;
+}
+
+.transform( @value ) {
+	-webkit-transform: @value;
+	-moz-transform: @value;
+	-ms-transform: @value;
+	-o-transform: @value;
+	transform: @value;
+}
+
+.transform-origin( @value ) {
+	-webkit-transform-origin: @value;
+	-moz-transform-origin: @value;
+	-ms-transform-origin: @value;
+	-o-transform-origin: @value;
+	transform-origin: @value;
+}
+
+.border-top-left-radius( @value ) {
+	-webkit-border-top-left-radius: @value;
+	-moz-border-top-left-radius: @value;
+	border-top-left-radius: @value;
+}
+
+.border-top-right-radius( @value ) {
+	-webkit-border-top-right-radius: @value;
+	-moz-border-top-right-radius: @value;
+	border-top-right-radius: @value;
+}
+
+.border-bottom-left-radius( @value ) {
+	-webkit-border-bottom-left-radius: @value;
+	-moz-border-bottom-left-radius: @value;
+	border-bottom-left-radius: @value;
+}
+
+.border-bottom-right-radius( @value ) {
+	-webkit-border-bottom-right-radius: @value;
+	-moz-border-bottom-right-radius: @value;
+	border-bottom-right-radius: @value;
+}
+
+.placeholder-color( @value ) {
+	&::-webkit-input-placeholder {
+		color: @value;
+	}
+	&:-moz-placeholder {
+		color: @value;  
+	}
+	&::-moz-placeholder {
+		color: @value;  
+	}
+	&:-ms-input-placeholder {  
+		color: @value;  
+	}
+}

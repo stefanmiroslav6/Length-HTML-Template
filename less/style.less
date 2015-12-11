@@ -1,0 +1,136 @@
+/*------------------------------------------------------------------
+[Table of contents]
+
+1. Header
+2. Preloader
+3. Main Slider
+4. Content
+5. Blog
+6. Portfolio
+7. Team
+8. Sidebar
+9. Footer
+10. Responsive Styles
+-------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------
+[1. Header]
+*/
+@import "header.less";
+
+/*------------------------------------------------------------------
+[2. Preloader]
+*/
+@import "preloader.less";
+
+/*------------------------------------------------------------------
+[3. Main Slider]
+*/
+@import "slider.less";
+
+/*------------------------------------------------------------------
+[4. Content]
+*/
+@import "content.less";
+
+/*------------------------------------------------------------------
+[5. Blog]
+*/
+@import "blog.less";
+
+/*------------------------------------------------------------------
+[6. Portfolio Single]
+*/
+@import "project.less";
+
+/*------------------------------------------------------------------
+[7. Team]
+*/
+@import "team.less";
+
+/*------------------------------------------------------------------
+[8. Sidebar]
+*/
+@import "sidebar.less";
+
+/*------------------------------------------------------------------
+[9. Footer]
+*/
+@import "footer.less";
+
+/*------------------------------------------------------------------
+[10. Responsive Styles]
+*/
+@import "media.less";
+
+/*------------------------------------------------------------------
+[11. Fundamental styles for all pages ]
+*/
+* {
+	-webkit-backface-visibility: hidden;
+}
+body {
+	line-height: 1.6;
+	font-family: 'Roboto', sans-serif;
+	font-size: 15px;
+	font-weight: 300;
+	color: @text-color;
+	width: 100%;
+	overflow-x: hidden;
+}
+
+[data-animate] {
+	visibility: hidden;
+}
+
+.aligncenter {
+	text-align: center;
+}
+.alignleft {
+	text-align: left;
+}
+.alignright {
+	text-align: right;
+}
+
+h1 {
+	font-size: 42px;
+}
+h2 {
+	font-size: 32px;
+}
+h3 {
+	font-size: 24px;
+}
+h4 {
+	font-size: 18px;
+}
+h5 {
+	font-size: 15px;
+}
+h6 {
+	font-size: 12px;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Exo 2', sans-serif;
+	margin: 0;
+}
+a {
+	color: @primary-color;
+}
+a:focus, a:hover {
+	text-decoration: none;
+	color: @primary-hover-color;
+}
+p {
+	padding: 0;
+	margin: 0;
+	&:not(:last-child) {
+		margin-bottom: 20px;
+	}
+}
+
+video {
+	width: 100%;
+	display: block;
+}
